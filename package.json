@@ -26,5 +26,6 @@
     "mocha": "^4.0.1",
     "webpack": "^3.10.0"
   },
+  "keywords": [],
   "description": ""
 }
