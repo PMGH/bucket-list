@@ -24,3 +24,12 @@ MongoClient.connect("mongodb://localhost:27017/bucket_list", function(err, clien
 app.get("/", function(req, res){
 	res.sendFile(__dirname + "/client/build/index.html");
 });
+
+app.get("/bucket_list", function(req, res) {
+	db.collection("bucket_list").find().toArray(function(err, results){
+	  if(err){
+		return console.log(err);
+	  }
+	  res.json(results);
+	});
+});

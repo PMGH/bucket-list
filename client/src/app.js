@@ -1,4 +1,4 @@
-// var PlayerView = require('./views/bucketListView');
+// var ChosenCountryView = require('./views/chosenCountryView');
 
 var makeRequest = function(url, callback){
   var request = new XMLHttpRequest();
@@ -8,10 +8,11 @@ var makeRequest = function(url, callback){
 };
 
 var requestComplete = function() {
-  if (this.status !== 200) return;
+  if (this.status !== 200) return console.log("request failed");
   var bucketListString = this.responseText;
   var bucketList = JSON.parse(bucketListString);
-  // var UI = new BucketListView(bucketList);
+  // var UI = new ChosenCountryView(bucketList);
+  console.log(bucketList);
 };
 
 var app = function(){
