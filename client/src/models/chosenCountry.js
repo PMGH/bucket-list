@@ -1,8 +1,8 @@
-var ChosenCountry = function(name, lat, long, flag){
-    this.name = name;
-    this.lat = lat;
-    this.long = long;
-    this.flag = flag;
+var ChosenCountry = function(options){
+    this.name = options.name;
+    this.lat = options.lat;
+    this.long = options.long;
+    this.flag = options.flag;
 }
 
 
