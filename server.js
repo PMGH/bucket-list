@@ -33,3 +33,15 @@ app.get("/bucket_list", function(req, res) {
 	  res.json(results);
 	});
 });
+
+app.post("/add_country", function(req, res) {
+  var chosenCountry = new Country(req.body);
+  db.collection("bucket_list").save(chosenCountry, function(err, result) {
+    if(err){
+      return console.log(err);
+    }
+
+    console.log("Saved to database");
+    res.redirect("/");
+  });
+});
