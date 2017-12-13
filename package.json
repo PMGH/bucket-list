@@ -19,5 +19,8 @@
   "homepage": "https://github.com/PMGH/bucket-list#readme",
   "dependencies": {
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
   }
 }
