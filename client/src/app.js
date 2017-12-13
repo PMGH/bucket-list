@@ -38,7 +38,6 @@ var populateList = function(countries){
 
 var handleSelection = function(country) {
   var chosenCountry = new ChosenCountry(country);
-  
   console.log(chosenCountry);
 };
 
