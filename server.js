@@ -34,8 +34,14 @@ app.get("/bucket_list", function(req, res) {
 	});
 });
 
-app.post("/add_country", function(req, res) {
-  var chosenCountry = new Country(req.body);
+app.post("/bucket_list", function(req, res) {
+  console.log('In post');
+  console.log(req.body);
+  var chosenCountry = {
+    name: req.body
+  }
+  // var chosenCountry = new ChosenCountry(req.body);
+  console.log(chosenCountry);
   db.collection("bucket_list").save(chosenCountry, function(err, result) {
     if(err){
       return console.log(err);
