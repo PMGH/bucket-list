@@ -15,6 +15,7 @@ var requestComplete = function() {
 };
 
 var app = function(){
+  console.log("Running app.js");
   var url = "https://restcountries.eu/rest/v2/all";
   makeRequest(url, requestComplete);
 };
